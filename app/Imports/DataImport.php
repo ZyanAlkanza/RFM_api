@@ -12,7 +12,6 @@ class DataImport implements ToModel
     use Importable;
     public function model(array $row)
     {   
-        dd($row);
         return Data::create([
             'tgl_invoice'       => $row[0],
             'ro_ke'             => $row[1],
