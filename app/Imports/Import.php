@@ -8,14 +8,9 @@ use Maatwebsite\Excel\Concerns\ToModel;
 
 class DataImport implements ToModel
 {
-    /**
-     * @param array $row
-     *
-     * @return User|null
-     */
     public function model(array $row)
     {
-        return new Data([
+        return Data::create([
             'tgl_invoice'       => $row[0],
             'ro_ke'             => $row[1],
             'no_invoice'        => $row[2],

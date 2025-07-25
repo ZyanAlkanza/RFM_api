@@ -11,7 +11,7 @@ class DataController extends Controller
 {
     public function import(Request $request) {
         try {
-            Excel::import(new DataImport, $request->file(''));
+            Excel::import(new DataImport, $request->file('file'));
     
             return response()->json([
                 'status'    => true,
